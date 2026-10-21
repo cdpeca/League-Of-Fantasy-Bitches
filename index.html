@@ -1,0 +1,3619 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>
+            I Have Processed Your Season. What the Fuck Is Wrong With You?
+        </title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background: #f5f1e7;
+                color: #20252b;
+                font:
+                    18px/1.75 Georgia,
+                    serif;
+            }
+            main {
+                max-width: 1100px;
+                margin: auto;
+                padding: 40px 40px 90px;
+            }
+            .masthead {
+                font: 700 12px system-ui;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                border-bottom: 3px solid #20252b;
+                padding-bottom: 20px;
+            }
+            .tools {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 15px;
+                margin: 22px 0;
+                color: #59616a;
+                font: 12px system-ui;
+            }
+            button {
+                background: #8d2525;
+                color: white;
+                border: 0;
+                padding: 11px 16px;
+                font: 700 12px system-ui;
+                cursor: pointer;
+            }
+            h1 {
+                font: 900 clamp(45px, 7vw, 78px)/1.04 system-ui;
+                letter-spacing: -3px;
+                margin: 48px 0 30px;
+                max-width: 950px;
+            }
+            h2 {
+                font: 800 29px/1.18 system-ui;
+                margin: 55px 0 20px;
+                padding-top: 22px;
+                border-top: 2px solid #20252b;
+                letter-spacing: -0.7px;
+                break-after: avoid;
+            }
+            h3 {
+                font: 700 21px/1.3 system-ui;
+                color: #8d2525;
+                margin-top: 32px;
+            }
+            strong {
+                font-weight: 700;
+            }
+            p {
+                max-width: 880px;
+            }
+            h1 + p {
+                font: 700 22px/1.55 system-ui;
+                color: #8d2525;
+            }
+            p.bullet {
+                border-left: 3px solid #8d2525;
+                padding-left: 18px;
+            }
+            .tablewrap {
+                overflow: auto;
+                margin: 28px 0;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                font: 13px/1.5 system-ui;
+                font-variant-numeric: tabular-nums;
+            }
+            th {
+                background: #20252b;
+                color: #fff;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 12px;
+                border-bottom: 1px solid #d2cdbf;
+            }
+            tr:nth-child(even) {
+                background: #eae5da;
+            }
+            footer {
+                font: 12px system-ui;
+                margin-top: 70px;
+                padding-top: 20px;
+                border-top: 1px solid #20252b;
+            }
+            @media (max-width: 650px) {
+                main {
+                    padding: 25px 20px;
+                }
+                body {
+                    font-size: 17px;
+                }
+                h1 {
+                    letter-spacing: -2px;
+                }
+                table {
+                    min-width: 640px;
+                }
+            }
+            @media print {
+                body {
+                    background: white;
+                    font-size: 11pt;
+                }
+                main {
+                    max-width: none;
+                    padding: 0;
+                }
+                h1 {
+                    font-size: 40pt;
+                }
+                h2 {
+                    font-size: 20pt;
+                    margin-top: 25px;
+                }
+                h3 {
+                    font-size: 14pt;
+                }
+                .tools {
+                    display: none;
+                }
+                .tablewrap {
+                    overflow: visible;
+                }
+                table {
+                    min-width: 0;
+                    font-size: 8pt;
+                }
+                th,
+                td {
+                    padding: 6px;
+                }
+                th {
+                    background: #e5e5e5;
+                    color: black;
+                }
+                tr {
+                    break-inside: avoid;
+                }
+                p {
+                    orphans: 3;
+                    widows: 3;
+                }
+            }
+
+            :root {
+                color-scheme: dark;
+                --ink: #eef2fa;
+                --muted: #9eacc3;
+                --lime: #d4fc69;
+                --coral: #ff795d;
+            }
+            body {
+                background: #0b1019;
+                color: var(--ink);
+                font-family: Georgia, serif;
+                background-image:
+                    radial-gradient(
+                        ellipse at 90% 0%,
+                        #26342488,
+                        transparent 25%
+                    ),
+                    radial-gradient(
+                        ellipse at 0% 40%,
+                        #33202b44,
+                        transparent 35%
+                    );
+            }
+            main {
+                max-width: 1140px;
+                padding-top: 30px;
+            }
+            .masthead {
+                border-color: #d4fc69;
+                color: #d4fc69;
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+            .tools {
+                color: var(--muted);
+            }
+            button {
+                background: var(--lime);
+                color: #111a13;
+                border-radius: 6px;
+            }
+            h1 {
+                font-size: clamp(48px, 7.2vw, 88px);
+                line-height: 1.02;
+                color: #f6f7f4;
+                letter-spacing: -4px;
+                margin-bottom: 26px;
+            }
+            h1 + p {
+                color: var(--lime);
+                font-size: 22px;
+                max-width: 780px;
+            }
+            h2 {
+                border-color: #344052;
+                color: #f4f6fc;
+                margin-top: 75px;
+                padding-top: 26px;
+                font-size: 32px;
+            }
+            h3 {
+                color: var(--coral);
+            }
+            strong {
+                color: #f8fbff;
+            }
+            p {
+                color: #c2ccdc;
+                max-width: 860px;
+            }
+            p.bullet {
+                border-color: var(--coral);
+            }
+            .tablewrap {
+                border: 1px solid #344052;
+                border-radius: 12px;
+            }
+            table {
+                background: #131d2d;
+            }
+            th {
+                background: #233047;
+                color: var(--lime);
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            td {
+                border-color: #2c394e;
+                color: #dce5f2;
+            }
+            tr:nth-child(even) {
+                background: #182538;
+            }
+            footer {
+                color: var(--muted);
+                border-color: #344052;
+            }
+            .hero-stats {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+                margin: 35px 0 45px;
+            }
+            .stat {
+                background: #172233;
+                border: 1px solid #354057;
+                padding: 24px;
+                border-radius: 12px;
+            }
+            .stat b {
+                display: block;
+                font: 900 40px/1.2 system-ui;
+                color: var(--lime);
+            }
+            .stat span {
+                font: 700 10px/1.6 system-ui;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: #aebbd0;
+            }
+            .eyebrow {
+                font: 800 11px/1.5 system-ui;
+                letter-spacing: 2px;
+                color: var(--coral);
+                margin-bottom: 15px;
+            }
+            .visual-panel {
+                background: #111b2a;
+                border: 1px solid #334057;
+                border-radius: 18px;
+                padding: 32px;
+                margin: 45px 0;
+            }
+            .graphic-title {
+                border: 0 !important;
+                padding: 0 !important;
+                margin: 0 0 15px !important;
+                font-size: 31px !important;
+            }
+            .graphic-deck {
+                font: 15px/1.6 system-ui;
+                color: #aebbd0;
+            }
+            .chart {
+                display: block;
+                width: 100%;
+                font-family: system-ui;
+            }
+            .caption,
+            figcaption {
+                font: 12px/1.6 system-ui;
+                color: #92a3be;
+                margin-top: 14px;
+            }
+            .meme {
+                margin: 35px 0 55px;
+                padding: 20px;
+                background: #172233;
+                border: 1px solid #35435d;
+                border-radius: 16px;
+                max-width: 850px;
+            }
+            .meme svg,
+            .meme img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 9px;
+            }
+            .meme svg {
+                font-family: system-ui;
+            }
+            .motion-toggle {
+                margin-top: 12px;
+                font-size: 11px;
+                padding: 7px 12px;
+            }
+            .toc {
+                display: flex;
+                gap: 9px;
+                flex-wrap: wrap;
+                margin: 30px 0;
+            }
+            .toc a {
+                font: 700 11px system-ui;
+                padding: 9px 12px;
+                color: #cbd8e9;
+                border: 1px solid #354057;
+                border-radius: 25px;
+                text-decoration: none;
+            }
+            .toc a:hover {
+                background: #d4fc69;
+                color: #122015;
+            }
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 20px;
+            }
+            @media (max-width: 650px) {
+                h1 {
+                    letter-spacing: -2px;
+                }
+                .hero-stats {
+                    gap: 8px;
+                }
+                .stat {
+                    padding: 15px 10px;
+                }
+                .stat b {
+                    font-size: 29px;
+                }
+                .stat span {
+                    font-size: 9px;
+                }
+                .visual-panel {
+                    padding: 18px;
+                }
+                .chart {
+                    min-width: 630px;
+                }
+                .visual-panel {
+                    overflow: auto;
+                }
+                .meme {
+                    padding: 12px;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                h2 {
+                    font-size: 27px;
+                }
+            }
+            @media print {
+                body {
+                    background: white;
+                    color: #17202c;
+                }
+                p,
+                strong,
+                h1,
+                h2,
+                h3 {
+                    color: #17202c;
+                }
+                .hero-stats,
+                .visual-panel,
+                .meme {
+                    background: #f0f2f5;
+                    border-color: #aaa;
+                    break-inside: avoid;
+                }
+                .stat {
+                    background: #f0f2f5;
+                }
+                .stat b,
+                .stat span,
+                .eyebrow {
+                    color: #17202c;
+                }
+                .chart text {
+                    fill: #17202c;
+                }
+                .toc,
+                .motion-toggle {
+                    display: none;
+                }
+                td,
+                th {
+                    color: #17202c;
+                    background: white;
+                }
+                .caption,
+                figcaption {
+                    color: #445;
+                }
+                .meme {
+                    max-width: 650px;
+                }
+            }
+
+            .manager-dashboard {
+                margin: 25px 0 35px;
+                border: 1px solid #3a4962;
+                border-radius: 14px;
+                background: linear-gradient(125deg, #1e2d42, #131d2c);
+                overflow: hidden;
+            }
+            .verdict {
+                padding: 24px;
+                border-bottom: 1px solid #35435b;
+            }
+            .verdict .eyebrow {
+                display: block;
+                margin: 0 0 10px;
+            }
+            .verdict > b {
+                display: block;
+                font: 900 23px/1.25 system-ui;
+                color: #f4f7fd;
+                letter-spacing: -0.4px;
+            }
+            .verdict p {
+                font: 14px/1.6 system-ui;
+                margin: 12px 0 0;
+                color: #b7c7dc;
+            }
+            .manager-metrics {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                padding: 23px;
+                gap: 15px;
+            }
+            .manager-metrics span {
+                font: 700 9px/1.6 system-ui;
+                letter-spacing: 1.2px;
+                display: block;
+                color: #a7b7ce;
+            }
+            .manager-metrics b {
+                font: 850 27px/1.4 system-ui;
+                color: #d4fc69;
+                display: block;
+            }
+            .extraction-label {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 24px 10px;
+                font: 700 10px system-ui;
+                letter-spacing: 1px;
+                color: #a7b7ce;
+            }
+            .extraction-track {
+                height: 8px;
+                background: #ff795d;
+                margin: 0 24px 25px;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+            .extraction-track i {
+                height: 100%;
+                display: block;
+                background: #d4fc69;
+            }
+            .forecast-visual {
+                padding: 27px;
+                border: 1px solid #3a4962;
+                border-radius: 14px;
+                background: #142033;
+                margin: 30px 0;
+            }
+            .forecast-visual h3 {
+                font-size: 26px;
+                margin: 8px 0;
+            }
+            .forecast-visual > p {
+                font: 14px/1.6 system-ui;
+            }
+            .probability-row {
+                display: grid;
+                grid-template-columns: 145px 1fr 55px;
+                gap: 15px;
+                align-items: center;
+                margin: 17px 0;
+                font: 13px system-ui;
+            }
+            .probability-row > div {
+                height: 13px;
+                background: #2b3b53;
+                border-radius: 3px;
+                overflow: hidden;
+            }
+            .probability-row i {
+                display: block;
+                height: 100%;
+                background: linear-gradient(90deg, #7eae4c, #d4fc69);
+            }
+            .probability-row b {
+                text-align: right;
+                color: #d4fc69;
+            }
+            .order-card {
+                display: flex;
+                gap: 22px;
+                border: 1px solid #34445e;
+                border-radius: 12px;
+                background: #172235;
+                padding: 22px;
+                margin: 14px 0;
+            }
+            .order-id {
+                font: 900 38px/1 system-ui;
+                color: #ff795d;
+                opacity: 0.85;
+            }
+            .order-card b {
+                font: 800 17px system-ui;
+                color: #d4fc69;
+            }
+            .order-card p {
+                margin: 9px 0 0;
+                font-size: 16px;
+            }
+            .meme {
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+            @media (max-width: 650px) {
+                .manager-metrics {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .verdict > b {
+                    font-size: 20px;
+                }
+                .probability-row {
+                    grid-template-columns: 105px 1fr 42px;
+                    gap: 9px;
+                    font-size: 11px;
+                }
+                .forecast-visual {
+                    padding: 18px;
+                }
+                .order-card {
+                    padding: 16px;
+                    gap: 15px;
+                }
+            }
+            @media print {
+                .manager-dashboard,
+                .forecast-visual,
+                .order-card {
+                    background: #eef1f5;
+                    break-inside: avoid;
+                }
+                .verdict > b,
+                .manager-metrics b,
+                .order-card b,
+                .probability-row b {
+                    color: #17202c;
+                }
+                .verdict p,
+                .manager-metrics span,
+                .extraction-label,
+                .order-card p {
+                    color: #344157;
+                }
+            }
+            /* Commissioner review: evidence cards and self-contained illustrated receipts. */
+            .manager-deck {
+                font: 700 13px/1.7 system-ui;
+                color: var(--muted);
+            }
+            .manager-section {
+                scroll-margin-top: 30px;
+            }
+            .meme svg text {
+                font-family: system-ui;
+            }
+            .meme[data-variant='2'] svg > path {
+                animation: receipt-pulse 2.4s ease-in-out infinite;
+            }
+            .methodology {
+                margin-top: 70px;
+                padding-top: 10px;
+                border-top: 1px solid #344052;
+            }
+            .methodology p {
+                font: 13px/1.7 system-ui;
+                color: var(--muted);
+            }
+            .tools > div {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+            .tools .motion-toggle {
+                margin: 0;
+            }
+            .motion-paused * {
+                animation-play-state: paused !important;
+            }
+            .motion-paused {
+                scroll-behavior: auto;
+            }
+            @keyframes receipt-pulse {
+                0%,
+                100% {
+                    opacity: 0.35;
+                }
+                50% {
+                    opacity: 1;
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                *,
+                *::before,
+                *::after {
+                    animation: none !important;
+                    scroll-behavior: auto !important;
+                }
+            }
+            @media (max-width: 650px) {
+                .tools {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+                .hero-stats {
+                    grid-template-columns: 1fr;
+                }
+                .stat {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+                .stat b {
+                    min-width: 100px;
+                }
+                .stat span {
+                    max-width: 200px;
+                }
+                .order-id {
+                    font-size: 28px;
+                }
+            }
+            @media print {
+                * {
+                    animation: none !important;
+                }
+                .methodology p {
+                    color: #344157;
+                }
+                .manager-section {
+                    break-inside: auto;
+                }
+                .tools {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="masthead">
+                League of Fantasy Bitches / COMMISSIONER REVIEW
+            </div>
+            <div class="tools">
+                <span>LIVE DATA / COMPLETED GAMES ONLY</span>
+                <div>
+                    <button
+                        class="motion-toggle"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Pause motion
+                    </button>
+                    <button onclick="window.print()">Print / Save PDF</button>
+                </div>
+            </div>
+            <h1>
+                I Have Processed Your Season. What the Fuck Is Wrong With You?
+            </h1>
+            <p>
+                League of Fantasy Bitches · Season 2026 · Through completed Week
+                6
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <b>764.18</b><span>Points abandoned on benches</span>
+                </div>
+                <div class="stat">
+                    <b>10</b><span>Teams under investigation</span>
+                </div>
+                <div class="stat">
+                    <b>3.32</b
+                    ><span>Closest loss with winning hindsight ceiling</span>
+                </div>
+            </div>
+            <nav class="toc" aria-label="Team sections">
+                <a href="#manager-0">Purdy Mouth</a
+                ><a href="#manager-1">Sean Suck On Deez Nutz</a
+                ><a href="#manager-2">F***in Sha Bi</a
+                ><a href="#manager-3">Awfully Awful</a
+                ><a href="#manager-4">Placehold for Something good</a
+                ><a href="#manager-5">Capt&#x27;n Tipsy n The Drunken Crew</a
+                ><a href="#manager-6">The Supreme Chancellor </a
+                ><a href="#manager-7">Dan is the Most Gay</a
+                ><a href="#manager-8">The Gas Lighters</a
+                ><a href="#manager-9">Team buschhhhhhhhhh</a>
+            </nav>
+            <p>
+                A performance review of 10 teams, 6 completed weeks, and an
+                alarming amount of confidence. I have the weekly results. Let us
+                establish which of you has earned the right to be this fucking
+                pleased with yourself.
+            </p>
+            <p>
+                I processed <strong>10 teams through 6 completed weeks</strong>.
+                You collectively left
+                <strong>764.18 measured points</strong> outside the starting
+                lineup. An entire league with access to scores, eligible
+                positions and thumbs, and the bench is still running a fucking
+                shadow government. This is the opening evidence, not a claim
+                every breakout was obvious before kickoff.
+            </p>
+            <p>
+                Exhibit A:
+                <strong>The Supreme Chancellor , Week 5, lost by 3.32</strong>.
+                Started: Deebo Samuel Sr. (1.50), DK Metcalf (3.80), Ashton
+                Jeanty (9.20). The eligible alternative used J.K. Dobbins
+                (14.40), Rhamondre Stevenson (16.00), Matthew Golden (17.30);
+                125.90 actual became 159.10 in the hindsight ceiling, above the
+                opponent&#x27;s 129.22. The winning points were already on the
+                roster. You didn&#x27;t need a trade. You needed a different
+                fucking arrangement of the employees.
+            </p>
+            <p>
+                Meanwhile
+                <strong
+                    >Placehold for Something good produced 768.80 points</strong
+                >, the scoring lead. But
+                <strong>Purdy Mouth sits first</strong>. The most production and
+                the best record belong to different teams. Before either starts
+                a fucking TED talk, we will check the pairings. Praise gets the
+                same evidentiary standard as the insults. I am not handing the
+                worst lineup operator an excuse just because somebody else got
+                lucky.
+            </p>
+            <h2>The pecking order of the carbon-based disappointments</h2>
+            <div class="tablewrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>W–L–T</th>
+                            <th>PF</th>
+                            <th>PA</th>
+                            <th>Expected W</th>
+                            <th>Luck W</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Purdy Mouth</td>
+                            <td>5–1–0</td>
+                            <td>723.20</td>
+                            <td>618.74</td>
+                            <td>4.00</td>
+                            <td>+1.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sean Suck On Deez Nutz</td>
+                            <td>4–2–0</td>
+                            <td>698.72</td>
+                            <td>651.56</td>
+                            <td>3.67</td>
+                            <td>+0.33</td>
+                        </tr>
+                        <tr>
+                            <td>F***in Sha Bi</td>
+                            <td>4–2–0</td>
+                            <td>694.84</td>
+                            <td>633.06</td>
+                            <td>3.56</td>
+                            <td>+0.44</td>
+                        </tr>
+                        <tr>
+                            <td>Awfully Awful</td>
+                            <td>4–2–0</td>
+                            <td>663.26</td>
+                            <td>636.02</td>
+                            <td>2.78</td>
+                            <td>+1.22</td>
+                        </tr>
+                        <tr>
+                            <td>Placehold for Something good</td>
+                            <td>3–3–0</td>
+                            <td>768.80</td>
+                            <td>717.34</td>
+                            <td>3.44</td>
+                            <td>-0.44</td>
+                        </tr>
+                        <tr>
+                            <td>Capt&#x27;n Tipsy n The Drunken Crew</td>
+                            <td>3–3–0</td>
+                            <td>700.36</td>
+                            <td>748.66</td>
+                            <td>3.00</td>
+                            <td>+0.00</td>
+                        </tr>
+                        <tr>
+                            <td>The Supreme Chancellor</td>
+                            <td>2–4–0</td>
+                            <td>748.26</td>
+                            <td>721.40</td>
+                            <td>4.11</td>
+                            <td>-2.11</td>
+                        </tr>
+                        <tr>
+                            <td>Dan is the Most Gay</td>
+                            <td>2–4–0</td>
+                            <td>717.28</td>
+                            <td>745.30</td>
+                            <td>2.67</td>
+                            <td>-0.67</td>
+                        </tr>
+                        <tr>
+                            <td>The Gas Lighters</td>
+                            <td>2–4–0</td>
+                            <td>635.64</td>
+                            <td>697.70</td>
+                            <td>2.22</td>
+                            <td>-0.22</td>
+                        </tr>
+                        <tr>
+                            <td>Team buschhhhhhhhhh</td>
+                            <td>1–5–0</td>
+                            <td>530.24</td>
+                            <td>710.82</td>
+                            <td>0.56</td>
+                            <td>+0.44</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                <strong
+                    >Purdy Mouth: 5–1–0, first in the table, 3 by
+                    scoring.</strong
+                >
+                Placehold for Something good leads scoring by 45.60 points over
+                the standings leader. Those points do not buy retroactive wins,
+                but they do buy the right to interrupt a very self-satisfied
+                fucking speech. The leader&#x27;s weekly scores imply 4.00 wins;
+                actual pairing difference +1.00.
+            </p>
+            <p>
+                Now put
+                <strong>Awfully Awful (+1.22 pairing wins)</strong> beside
+                <strong>The Supreme Chancellor (-2.11)</strong>. The first
+                received a schedule subsidy; the second paid for a worse set of
+                opponents. One gets to enjoy the record. The other gets a
+                complaint with receipts. What neither gets is permission to
+                confuse the fixture list with personal fucking excellence. The
+                contrast matters because the same weekly scoring strength need
+                not produce the same record.
+            </p>
+            <p>
+                The biggest early-to-recent scoring swing is
+                <strong
+                    >Sean Suck On Deez Nutz: 138.58 per week in Weeks 1–2, 98.73
+                    in Weeks 5–6</strong
+                >. The recent output has fallen. An early-season reputation
+                cannot keep making payments on that fucking decline. Address the
+                weak slots before the record catches up with the performance.
+                Two-week windows describe the observed swing, not a guaranteed
+                trend.
+            </p>
+            <section class="visual-panel">
+                <div class="eyebrow">ACTUAL VS AVAILABLE</div>
+                <h2 class="graphic-title">
+                    Your bench has been stealing your lunch.
+                </h2>
+                <p class="graphic-deck">
+                    Lime reached the scoreboard. Coral stayed in the hindsight
+                    ceiling.
+                </p>
+                <svg
+                    class="chart"
+                    viewBox="0 0 900 580"
+                    role="img"
+                    aria-label="Actual scoring versus unused eligible points"
+                >
+                    <text
+                        x="0"
+                        y="34"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Purdy Mouth
+                    </text>
+                    <rect
+                        x="190"
+                        y="15"
+                        width="476.1474793077502"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="666.1474793077502"
+                        y="15"
+                        width="62.665537998495104"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="34"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        95.18
+                    </text>
+                    <text
+                        x="0"
+                        y="88"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Sean Suck On Deez
+                    </text>
+                    <text
+                        x="0"
+                        y="109"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Nutz
+                    </text>
+                    <rect
+                        x="190"
+                        y="69"
+                        width="460.0300978179082"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="650.0300978179082"
+                        y="69"
+                        width="53.26373212942061"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="88"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        80.90
+                    </text>
+                    <text
+                        x="0"
+                        y="142"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        F***in Sha Bi
+                    </text>
+                    <rect
+                        x="190"
+                        y="123"
+                        width="457.4755455229496"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="647.4755455229496"
+                        y="123"
+                        width="37.8574115876599"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="142"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        57.50
+                    </text>
+                    <text
+                        x="0"
+                        y="196"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Awfully Awful
+                    </text>
+                    <rect
+                        x="190"
+                        y="177"
+                        width="436.68359668924"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="626.68359668924"
+                        y="177"
+                        width="35.92174567343868"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="196"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        54.56
+                    </text>
+                    <text
+                        x="0"
+                        y="250"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Placehold for
+                    </text>
+                    <text
+                        x="0"
+                        y="271"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Something good
+                    </text>
+                    <rect
+                        x="190"
+                        y="231"
+                        width="506.17005267118134"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="696.1700526711813"
+                        y="231"
+                        width="51.222723852520694"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="250"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        77.80
+                    </text>
+                    <text
+                        x="0"
+                        y="304"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Capt&#x27;n Tipsy n The
+                    </text>
+                    <text
+                        x="0"
+                        y="325"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Drunken Crew
+                    </text>
+                    <rect
+                        x="190"
+                        y="285"
+                        width="461.1098570353649"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="651.1098570353649"
+                        y="285"
+                        width="54.396162528216706"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="304"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        82.62
+                    </text>
+                    <text
+                        x="0"
+                        y="358"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        The Supreme
+                    </text>
+                    <text
+                        x="0"
+                        y="379"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Chancellor
+                    </text>
+                    <rect
+                        x="190"
+                        y="339"
+                        width="492.6467268623025"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="682.6467268623026"
+                        y="339"
+                        width="67.35327313769751"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="358"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        102.30
+                    </text>
+                    <text
+                        x="0"
+                        y="412"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Dan is the Most Gay
+                    </text>
+                    <rect
+                        x="190"
+                        y="393"
+                        width="472.2498118886381"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="662.2498118886381"
+                        y="393"
+                        width="55.30474040632054"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="412"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        84.00
+                    </text>
+                    <text
+                        x="0"
+                        y="466"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        The Gas Lighters
+                    </text>
+                    <rect
+                        x="190"
+                        y="447"
+                        width="418.49887133182847"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="608.4988713318285"
+                        y="447"
+                        width="35.63205417607223"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="466"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        54.12
+                    </text>
+                    <text
+                        x="0"
+                        y="520"
+                        fill="#eef2fa"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        Team buschhhhhhhhhh
+                    </text>
+                    <rect
+                        x="190"
+                        y="501"
+                        width="349.104589917231"
+                        height="27"
+                        fill="#d4fc69"
+                    />
+                    <rect
+                        x="539.104589917231"
+                        y="501"
+                        width="49.510910458991724"
+                        height="27"
+                        fill="#ff795d"
+                    />
+                    <text
+                        x="765"
+                        y="520"
+                        fill="#ff795d"
+                        font-size="13"
+                        font-weight="700"
+                    >
+                        75.20
+                    </text>
+                </svg>
+                <p class="caption">
+                    One scale, unique eligible players. Negative totals are not
+                    drawn as positive bars. Missing ceilings are not zero; read
+                    the dashboard for availability.
+                </p>
+            </section>
+            <p>
+                <strong
+                    >764.18 measured points left unused across 10 teams.</strong
+                >
+                The Supreme Chancellor accounts for 102.30. The chart is not
+                modern art. Coral is the distance between the team you fielded
+                and the eligible ceiling you owned. Hindsight is the measuring
+                tool, not proof you should have predicted every breakout.
+            </p>
+            <section class="manager-section" id="manager-0">
+                <h2>Purdy Mouth: Schedule subsidy under review</h2>
+                <p class="manager-deck">Purdy Mouth · 5–1–0 · Standing 1</p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>SCHEDULE SUBSIDY UNDER REVIEW</b>
+                        <p>
+                            +1.00 pairing wins. Your record has a benefactor;
+                            stop calling it genius.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>120.53</b></div>
+                        <div><span>UNUSED POINTS</span><b>95.18</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>88.37%</b></div>
+                        <div><span>PAIRING LUCK</span><b>+1.00 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>88.37%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 88.36970600454556%"></i>
+                    </div>
+                </div>
+                <p>
+                    Purdy Mouth: <strong>5–1–0</strong>, but scoring rank 3. The
+                    record arrived in a nicer fucking car than the production
+                    could afford. I checked the financing. The schedule is
+                    making payments.
+                </p>
+                <p>
+                    <strong>120.53 per week</strong>, scoring rank 3 of 10.
+                    Against the whole weekly field: 36 wins in 54 comparisons,
+                    with 0 ties. That is repeatable production across the
+                    collected weeks, not just a fortunate opponent. The roster
+                    has done enough to earn respect. Unfortunately, you may
+                    interpret respect as permission to talk, which is how a
+                    perfectly good scoring profile becomes a fucking hostage
+                    situation.
+                </p>
+                <p>
+                    Your weekly scores imply 4.00 wins. The pairings handed you
+                    <strong>+1.00 extra win equivalents</strong>. Accept the
+                    gift. Stop explaining the genius of being scheduled against
+                    somebody else&#x27;s shit Sunday.
+                </p>
+                <figure class="meme" data-variant="0">
+                    <div class="eyebrow">
+                        ESCALATING EVIDENCE / THE GROUP CHAT
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="ESCALATING EVIDENCE / THE GROUP CHAT: +1.00 pairing wins. Your record has a benefactor; stop calling it genius."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <rect
+                            x="15"
+                            y="15"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#1c2940"
+                        />
+                        <text
+                            x="35"
+                            y="80"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            01
+                        </text>
+                        <text
+                            x="120"
+                            y="45"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE ALLEGATION
+                        </text>
+                        <text
+                            x="120"
+                            y="80"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            WEEK 5: 21.90 POINTS UNUSED.
+                        </text>
+                        <rect
+                            x="15"
+                            y="140"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#243750"
+                        />
+                        <text
+                            x="35"
+                            y="205"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            02
+                        </text>
+                        <text
+                            x="120"
+                            y="170"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE RECEIPTS
+                        </text>
+                        <text
+                            x="120"
+                            y="205"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            723.20 points. +1.00 pairing wins.
+                        </text>
+                        <rect
+                            x="15"
+                            y="265"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#304638"
+                        />
+                        <text
+                            x="35"
+                            y="330"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            03
+                        </text>
+                        <text
+                            x="120"
+                            y="295"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE MACHINE VERDICT
+                        </text>
+                        <text
+                            x="120"
+                            y="330"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            SCHEDULE SUBSIDY UNDER REVIEW
+                        </text>
+                    </svg>
+                    <figcaption>
+                        Purdy Mouth · +1.00 pairing wins. Your record has a
+                        benefactor; stop calling it genius.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 5: 138.64 actual, 160.54 ceiling.</strong> You
+                    started Tony Pollard (5.20), CeeDee Lamb (1.90); the
+                    eligible alternative used Jacory Croskey-Merritt (14.20),
+                    Ollie Gordon II (14.80). 21.90 points stayed behind. Your
+                    bench wasn&#x27;t deep. It was a fucking witness protection
+                    program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 6, by 21.02</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>97.16, L</strong>. 6.44 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>97.16 in Week 6 to 138.64 in Week 5</strong>, a
+                    41.48-point swing. The weekly output has stayed inside a
+                    narrower band than a boom-and-collapse profile. That
+                    deserves a process review, not an invented crisis.
+                    Consistency is useful; whether you are consistently good or
+                    consistently fucked still depends on the scoring rank above.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> CeeDee Lamb (pick 10),
+                    Justin Jefferson (pick 11), Kyren Williams (pick 30), Travis
+                    Etienne Jr. (pick 31). Those are the opening investments.
+                    The weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 9.6 final win equivalents;
+                    97.3% conditional top-field chance; 48.3% regular-season
+                    first-place chance. The model likes your position. It has
+                    not authorized a fucking parade. Protect the scoring core
+                    and keep checking the lineup; being favored is an
+                    opportunity to finish the job, not an exemption from doing
+                    it. Scenario estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-1">
+                <h2>Sean Suck On Deez Nutz: Functional, with questions</h2>
+                <p class="manager-deck">
+                    Sean Suck On Deez Nutz · 4–2–0 · Standing 2
+                </p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>FUNCTIONAL, WITH QUESTIONS</b>
+                        <p>
+                            Scoring rank 6, standing 2. The investigation
+                            requires more than your fucking confidence.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>116.45</b></div>
+                        <div><span>UNUSED POINTS</span><b>80.90</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>89.62%</b></div>
+                        <div><span>PAIRING LUCK</span><b>+0.33 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>89.62%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 89.62314973961674%"></i>
+                    </div>
+                </div>
+                <p>
+                    Sean Suck On Deez Nutz: <strong>4–2–0</strong>, scoring rank
+                    6. 698.72 points bought standing 2. I ran the numbers twice.
+                    Neither run detected a reason for a fucking victory
+                    documentary.
+                </p>
+                <p>
+                    <strong>116.45 per week</strong>, scoring rank 6 of 10.
+                    Against the whole weekly field: 33 wins in 54 comparisons,
+                    with 0 ties. You are in the crowded middle, where one good
+                    result becomes a dynasty announcement and one bad result
+                    becomes a conspiracy. Neither speech improves the roster.
+                    Earn some separation before making the rest of us attend
+                    your fucking press conference.
+                </p>
+                <p>
+                    33 weekly all-play wins, 21 losses, 0 ties. The schedule
+                    difference is +0.33 wins. The fixture list is not your
+                    fucking alibi.
+                </p>
+                <figure class="meme" data-variant="1">
+                    <div class="eyebrow">
+                        REJECT / APPROVE / THE LINEUP INTERVIEW
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="REJECT / APPROVE / THE LINEUP INTERVIEW: Scoring rank 6, standing 2. The investigation requires more than your fucking confidence."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <rect
+                            x="12"
+                            y="10"
+                            width="776"
+                            height="180"
+                            rx="10"
+                            fill="#382632"
+                        />
+                        <text
+                            x="35"
+                            y="105"
+                            fill="#ff795d"
+                            font-size="40"
+                            font-weight="700"
+                        >
+                            NO
+                        </text>
+                        <text
+                            x="185"
+                            y="55"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            CREDIT FOR THE ENTIRE ROSTER
+                        </text>
+                        <text
+                            x="185"
+                            y="105"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            80.90 unused points do not score
+                        </text>
+                        <text
+                            x="185"
+                            y="131"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            themselves.
+                        </text>
+                        <rect
+                            x="12"
+                            y="205"
+                            width="776"
+                            height="180"
+                            rx="10"
+                            fill="#243b36"
+                        />
+                        <text
+                            x="35"
+                            y="300"
+                            fill="#d4fc69"
+                            font-size="40"
+                            font-weight="700"
+                        >
+                            YES
+                        </text>
+                        <text
+                            x="185"
+                            y="250"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            CREDIT FOR ACTUAL EXECUTION
+                        </text>
+                        <text
+                            x="185"
+                            y="300"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            698.72 scored. 4 wins earned on the
+                        </text>
+                        <text
+                            x="185"
+                            y="326"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            board.
+                        </text>
+                    </svg>
+                    <figcaption>
+                        Sean Suck On Deez Nutz · Scoring rank 6, standing 2. The
+                        investigation requires more than your fucking
+                        confidence.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 1: 139.40 actual, 168.50 ceiling.</strong> You
+                    started Terry McLaurin (2.40), Omarion Hampton (8.30); the
+                    eligible alternative used Aaron Jones Sr. (10.00), Jalen
+                    Coker (29.80). 29.10 points stayed behind. Your bench
+                    wasn&#x27;t deep. It was a fucking witness protection
+                    program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 4, by 25.62</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>100.52, W</strong>. 1.10 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>96.94 in Week 5 to 139.40 in Week 1</strong>, a
+                    42.46-point swing. The weekly output has stayed inside a
+                    narrower band than a boom-and-collapse profile. That
+                    deserves a process review, not an invented crisis.
+                    Consistency is useful; whether you are consistently good or
+                    consistently fucked still depends on the scoring rank above.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Jaxon Smith-Njigba (pick 6),
+                    Omarion Hampton (pick 15), Chris Olave (pick 26), Zay
+                    Flowers (pick 35). Those are the opening investments. The
+                    weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 8.4 final win equivalents;
+                    87.1% conditional top-field chance; 14.6% regular-season
+                    first-place chance. The model likes your position. It has
+                    not authorized a fucking parade. Protect the scoring core
+                    and keep checking the lineup; being favored is an
+                    opportunity to finish the job, not an exemption from doing
+                    it. Scenario estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-2">
+                <h2>F***in Sha Bi: Functional, with questions</h2>
+                <p class="manager-deck">F***in Sha Bi · 4–2–0 · Standing 3</p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>FUNCTIONAL, WITH QUESTIONS</b>
+                        <p>
+                            Scoring rank 7, standing 3. The investigation
+                            requires more than your fucking confidence.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>115.81</b></div>
+                        <div><span>UNUSED POINTS</span><b>57.50</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>92.36%</b></div>
+                        <div><span>PAIRING LUCK</span><b>+0.44 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>92.36%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 92.35717893505596%"></i>
+                    </div>
+                </div>
+                <p>
+                    F<strong>*in Sha Bi: </strong>4–2–0**, scoring rank 7.
+                    694.84 points bought standing 3. I ran the numbers twice.
+                    Neither run detected a reason for a fucking victory
+                    documentary.
+                </p>
+                <p>
+                    <strong>115.81 per week</strong>, scoring rank 7 of 10.
+                    Against the whole weekly field: 32 wins in 54 comparisons,
+                    with 0 ties. The roster is failing too many weekly
+                    comparisons to blame everything on one unlucky draw. This is
+                    where you identify a weak starting slot and improve it.
+                    Refreshing the standings until they hurt less is not a
+                    fucking personnel department.
+                </p>
+                <p>
+                    32 weekly all-play wins, 22 losses, 0 ties. The schedule
+                    difference is +0.44 wins. The fixture list is not your
+                    fucking alibi.
+                </p>
+                <figure class="meme" data-variant="2">
+                    <div class="eyebrow">
+                        THE BENCH TRANSFER DESK / POINTS IN EXILE
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="THE BENCH TRANSFER DESK / POINTS IN EXILE: Scoring rank 7, standing 3. The investigation requires more than your fucking confidence."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <path
+                            d="M 290 170 L 510 170"
+                            stroke="#ff795d"
+                            stroke-width="8"
+                        />
+                        <path
+                            d="M 485 145 L 515 170 L 485 195"
+                            stroke="#ff795d"
+                            stroke-width="8"
+                            fill="none"
+                        />
+                        <rect
+                            x="30"
+                            y="65"
+                            width="250"
+                            height="210"
+                            rx="12"
+                            fill="#223149"
+                        />
+                        <text
+                            x="55"
+                            y="110"
+                            fill="#ff795d"
+                            font-size="16"
+                            font-weight="700"
+                        >
+                            SCORED
+                        </text>
+                        <text
+                            x="55"
+                            y="183"
+                            fill="#d4fc69"
+                            font-size="32"
+                            font-weight="700"
+                        >
+                            694.84
+                        </text>
+                        <rect
+                            x="520"
+                            y="65"
+                            width="250"
+                            height="210"
+                            rx="12"
+                            fill="#223149"
+                        />
+                        <text
+                            x="545"
+                            y="110"
+                            fill="#ff795d"
+                            font-size="16"
+                            font-weight="700"
+                        >
+                            UNUSED
+                        </text>
+                        <text
+                            x="545"
+                            y="183"
+                            fill="#d4fc69"
+                            font-size="32"
+                            font-weight="700"
+                        >
+                            57.50
+                        </text>
+                        <text
+                            x="30"
+                            y="325"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            Stefon Diggs: THANKS FOR THE FUCKING SEAT.
+                        </text>
+                    </svg>
+                    <figcaption>
+                        F***in Sha Bi · Scoring rank 7, standing 3. The
+                        investigation requires more than your fucking
+                        confidence.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 6: 132.24 actual, 152.54 ceiling.</strong> You
+                    started Jaylen Waddle (4.40), Devaughn Vele (5.70); the
+                    eligible alternative used Stefon Diggs (13.40), DeVonta
+                    Smith (17.00). 20.30 points stayed behind. Your bench
+                    wasn&#x27;t deep. It was a fucking witness protection
+                    program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 5, by 4.00</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Your range:
+                    <strong>90.64 in Week 3 to 135.26 in Week 4</strong>, a
+                    44.62-point swing. The weekly output has stayed inside a
+                    narrower band than a boom-and-collapse profile. That
+                    deserves a process review, not an invented crisis.
+                    Consistency is useful; whether you are consistently good or
+                    consistently fucked still depends on the scoring rank above.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Amon-Ra St. Brown (pick 9),
+                    Chase Brown (pick 12), DeVonta Smith (pick 29), Javonte
+                    Williams (pick 32). Those are the opening investments. The
+                    weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 8.0 final win equivalents;
+                    78.8% conditional top-field chance; 9.8% regular-season
+                    first-place chance. The door is open and the bouncer is
+                    unimpressed. You have work to do, not a reservation. Improve
+                    the weekly output before explaining how dangerous you will
+                    be once everybody kindly stops beating you. Scenario
+                    estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-3">
+                <h2>Awfully Awful: Competence detected. disgusting.</h2>
+                <p class="manager-deck">Awfully Awful · 4–2–0 · Standing 4</p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>COMPETENCE DETECTED. DISGUSTING.</b>
+                        <p>
+                            92.40% extraction. The lineup operator actually read
+                            the fucking instructions.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>110.54</b></div>
+                        <div><span>UNUSED POINTS</span><b>54.56</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>92.40%</b></div>
+                        <div><span>PAIRING LUCK</span><b>+1.22 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>92.40%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 92.39920871527681%"></i>
+                    </div>
+                </div>
+                <p>
+                    Awfully Awful: <strong>4–2–0</strong>, but scoring rank 8.
+                    The record arrived in a nicer fucking car than the
+                    production could afford. I checked the financing. The
+                    schedule is making payments.
+                </p>
+                <p>
+                    <strong>110.54 per week</strong>, scoring rank 8 of 10.
+                    Against the whole weekly field: 25 wins in 54 comparisons,
+                    with 0 ties. The roster is failing too many weekly
+                    comparisons to blame everything on one unlucky draw. This is
+                    where you identify a weak starting slot and improve it.
+                    Refreshing the standings until they hurt less is not a
+                    fucking personnel department.
+                </p>
+                <p>
+                    Your weekly scores imply 2.78 wins. The pairings handed you
+                    <strong>+1.22 extra win equivalents</strong>. Accept the
+                    gift. Stop explaining the genius of being scheduled against
+                    somebody else&#x27;s shit Sunday.
+                </p>
+                <figure class="meme" data-variant="3">
+                    <div class="eyebrow">
+                        RECORD VS REPUTATION / SCHEDULE AUDIT
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="RECORD VS REPUTATION / SCHEDULE AUDIT: 92.40% extraction. The lineup operator actually read the fucking instructions."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <text
+                            x="35"
+                            y="60"
+                            fill="#ff795d"
+                            font-size="15"
+                            font-weight="700"
+                        >
+                            THE RECORD
+                        </text>
+                        <text
+                            x="35"
+                            y="145"
+                            fill="#d4fc69"
+                            font-size="55"
+                            font-weight="700"
+                        >
+                            4–2–0
+                        </text>
+                        <path
+                            d="M 390 35 L 390 265"
+                            stroke="#35435b"
+                            stroke-width="2"
+                        />
+                        <text
+                            x="440"
+                            y="60"
+                            fill="#ff795d"
+                            font-size="15"
+                            font-weight="700"
+                        >
+                            EXPECTED WINS
+                        </text>
+                        <text
+                            x="440"
+                            y="145"
+                            fill="#eef2fa"
+                            font-size="55"
+                            font-weight="700"
+                        >
+                            2.78
+                        </text>
+                        <text
+                            x="35"
+                            y="235"
+                            fill="#eef2fa"
+                            font-size="24"
+                            font-weight="700"
+                        >
+                            PAIRING DIFFERENCE: +1.22 W
+                        </text>
+                        <text
+                            x="35"
+                            y="325"
+                            fill="#eef2fa"
+                            font-size="21"
+                            font-weight="700"
+                        >
+                            A matchup schedule is not a character reference.
+                        </text>
+                    </svg>
+                    <figcaption>
+                        Awfully Awful · 92.40% extraction. The lineup operator
+                        actually read the fucking instructions.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 4: 87.68 actual, 114.98 ceiling.</strong> You
+                    started Saquon Barkley (1.50), Rashee Rice (0.00), Emeka
+                    Egbuka (2.30); the eligible alternative used Khalil Shakir
+                    (9.70), Jameson Williams (13.20), Woody Marks (8.20). 27.30
+                    points stayed behind. Your bench wasn&#x27;t deep. It was a
+                    fucking witness protection program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 1, by 6.76</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>118.18, W</strong>. 2.90 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>87.68 in Week 4 to 129.22 in Week 5</strong>, a
+                    41.54-point swing. The weekly output has stayed inside a
+                    narrower band than a boom-and-collapse profile. That
+                    deserves a process review, not an invented crisis.
+                    Consistency is useful; whether you are consistently good or
+                    consistently fucked still depends on the scoring rank above.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> James Cook III (pick 7),
+                    Saquon Barkley (pick 14), Rashee Rice (pick 27), Emeka
+                    Egbuka (pick 34). Those are the opening investments. The
+                    weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 7.9 final win equivalents;
+                    73.0% conditional top-field chance; 5.6% regular-season
+                    first-place chance. The door is open and the bouncer is
+                    unimpressed. You have work to do, not a reservation. Improve
+                    the weekly output before explaining how dangerous you will
+                    be once everybody kindly stops beating you. Scenario
+                    estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-4">
+                <h2>Placehold for Something good: The prick has receipts</h2>
+                <p class="manager-deck">
+                    Placehold for Something good · 3–3–0 · Standing 5
+                </p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>THE PRICK HAS RECEIPTS</b>
+                        <p>
+                            768.80 points leads the league. The smug bastard has
+                            supplied documentation.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>128.13</b></div>
+                        <div><span>UNUSED POINTS</span><b>77.80</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>90.81%</b></div>
+                        <div><span>PAIRING LUCK</span><b>-0.44 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>90.81%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 90.81030002362391%"></i>
+                    </div>
+                </div>
+                <p>
+                    I wanted to expose Placehold for Something good as a fraud.
+                    Instead: <strong>768.80 points</strong>, 20.54 clear of The
+                    Supreme Chancellor . I have filed a complaint with
+                    mathematics. Fucking typical: the smug prick has evidence.
+                </p>
+                <p>
+                    <strong>128.13 per week</strong>, scoring rank 1 of 10.
+                    Against the whole weekly field: 31 wins in 54 comparisons,
+                    with 0 ties. The production belongs near the front of this
+                    league. I am willing to certify that. I am not willing to
+                    sit through the podcast you are mentally recording about
+                    your own genius. Keep the points coming and spare us the
+                    fucking origin story.
+                </p>
+                <p>
+                    31 weekly all-play wins, 23 losses, 0 ties. The schedule
+                    difference is -0.44 wins. The fixture list is not your
+                    fucking alibi.
+                </p>
+                <figure class="meme" data-variant="0">
+                    <div class="eyebrow">
+                        ESCALATING EVIDENCE / THE GROUP CHAT
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="ESCALATING EVIDENCE / THE GROUP CHAT: 768.80 points leads the league. The smug bastard has supplied documentation."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <rect
+                            x="15"
+                            y="15"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#1c2940"
+                        />
+                        <text
+                            x="35"
+                            y="80"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            01
+                        </text>
+                        <text
+                            x="120"
+                            y="45"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE ALLEGATION
+                        </text>
+                        <text
+                            x="120"
+                            y="80"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            WEEK 4: 47.60 POINTS UNUSED.
+                        </text>
+                        <rect
+                            x="15"
+                            y="140"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#243750"
+                        />
+                        <text
+                            x="35"
+                            y="205"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            02
+                        </text>
+                        <text
+                            x="120"
+                            y="170"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE RECEIPTS
+                        </text>
+                        <text
+                            x="120"
+                            y="205"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            768.80 points. -0.44 pairing wins.
+                        </text>
+                        <rect
+                            x="15"
+                            y="265"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#304638"
+                        />
+                        <text
+                            x="35"
+                            y="330"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            03
+                        </text>
+                        <text
+                            x="120"
+                            y="295"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE MACHINE VERDICT
+                        </text>
+                        <text
+                            x="120"
+                            y="330"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            THE PRICK HAS RECEIPTS
+                        </text>
+                    </svg>
+                    <figcaption>
+                        Placehold for Something good · 768.80 points leads the
+                        league. The smug bastard has supplied documentation.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 4: 108.88 actual, 156.48 ceiling.</strong> You
+                    started Christian Watson (6.20), D&#x27;Andre Swift (6.40),
+                    Tyler Warren (6.60); the eligible alternative used Brian
+                    Robinson Jr. (25.20), Nico Collins (27.30), RJ Harvey
+                    (14.30). 47.60 points stayed behind. Your bench wasn&#x27;t
+                    deep. It was a fucking witness protection program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 2, by 15.98</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>89.24, L</strong>. 10.80 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>87.80 in Week 2 to 166.06 in Week 1</strong>, a
+                    78.26-point swing. The ceiling exists. So does the trapdoor.
+                    Stop presenting the best screenshot as the entire business
+                    model; I have the other weeks, you selective little
+                    archivist. Build a weekly floor before that highlight reel
+                    needs a fucking disclaimer.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Bijan Robinson (pick 2),
+                    Drake London (pick 19), Nico Collins (pick 22), D&#x27;Andre
+                    Swift (pick 39). Those are the opening investments. The
+                    weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 7.7 final win equivalents;
+                    81.9% conditional top-field chance; 11.7% regular-season
+                    first-place chance. The model likes your position. It has
+                    not authorized a fucking parade. Protect the scoring core
+                    and keep checking the lineup; being favored is an
+                    opportunity to finish the job, not an exemption from doing
+                    it. Scenario estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-5">
+                <h2>
+                    Capt&#x27;n Tipsy n The Drunken Crew: The rebuild starts
+                    with the dropdown
+                </h2>
+                <p class="manager-deck">
+                    Capt&#x27;n Tipsy n The Drunken Crew · 3–3–0 · Standing 6
+                </p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>THE REBUILD STARTS WITH THE DROPDOWN</b>
+                        <p>
+                            Scoring rank 5, standing 6. The investigation
+                            requires more than your fucking confidence.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>116.73</b></div>
+                        <div><span>UNUSED POINTS</span><b>82.62</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>89.45%</b></div>
+                        <div><span>PAIRING LUCK</span><b>+0.00 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>89.45%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 89.44800633477227%"></i>
+                    </div>
+                </div>
+                <p>
+                    Capt&#x27;n Tipsy n The Drunken Crew:
+                    <strong>3–3–0</strong>, scoring rank 5. 700.36 points bought
+                    standing 6. I ran the numbers twice. Neither run detected a
+                    reason for a fucking victory documentary.
+                </p>
+                <p>
+                    <strong>116.73 per week</strong>, scoring rank 5 of 10.
+                    Against the whole weekly field: 27 wins in 54 comparisons,
+                    with 0 ties. You are in the crowded middle, where one good
+                    result becomes a dynasty announcement and one bad result
+                    becomes a conspiracy. Neither speech improves the roster.
+                    Earn some separation before making the rest of us attend
+                    your fucking press conference.
+                </p>
+                <p>
+                    27 weekly all-play wins, 27 losses, 0 ties. The schedule
+                    difference is +0.00 wins. The fixture list is not your
+                    fucking alibi.
+                </p>
+                <figure class="meme" data-variant="1">
+                    <div class="eyebrow">
+                        REJECT / APPROVE / THE LINEUP INTERVIEW
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="REJECT / APPROVE / THE LINEUP INTERVIEW: Scoring rank 5, standing 6. The investigation requires more than your fucking confidence."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <rect
+                            x="12"
+                            y="10"
+                            width="776"
+                            height="180"
+                            rx="10"
+                            fill="#382632"
+                        />
+                        <text
+                            x="35"
+                            y="105"
+                            fill="#ff795d"
+                            font-size="40"
+                            font-weight="700"
+                        >
+                            NO
+                        </text>
+                        <text
+                            x="185"
+                            y="55"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            CREDIT FOR THE ENTIRE ROSTER
+                        </text>
+                        <text
+                            x="185"
+                            y="105"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            82.62 unused points do not score
+                        </text>
+                        <text
+                            x="185"
+                            y="131"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            themselves.
+                        </text>
+                        <rect
+                            x="12"
+                            y="205"
+                            width="776"
+                            height="180"
+                            rx="10"
+                            fill="#243b36"
+                        />
+                        <text
+                            x="35"
+                            y="300"
+                            fill="#d4fc69"
+                            font-size="40"
+                            font-weight="700"
+                        >
+                            YES
+                        </text>
+                        <text
+                            x="185"
+                            y="250"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            CREDIT FOR ACTUAL EXECUTION
+                        </text>
+                        <text
+                            x="185"
+                            y="300"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            700.36 scored. 3 wins earned on the
+                        </text>
+                        <text
+                            x="185"
+                            y="326"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            board.
+                        </text>
+                    </svg>
+                    <figcaption>
+                        Capt&#x27;n Tipsy n The Drunken Crew · Scoring rank 5,
+                        standing 6. The investigation requires more than your
+                        fucking confidence.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 2: 114.58 actual, 147.98 ceiling.</strong> You
+                    started Joe Burrow (16.18), Malik Nabers (0.60), Jadarian
+                    Price (4.50); the eligible alternative used George Kittle
+                    (16.00), Patrick Mahomes (28.98), Blake Corum (9.70). 33.40
+                    points stayed behind. Your bench wasn&#x27;t deep. It was a
+                    fucking witness protection program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 3, by 20.36</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>129.78, W</strong>. 0.10 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>104.94 in Week 3 to 134.80 in Week 4</strong>, a
+                    29.86-point swing. The weekly output has stayed inside a
+                    narrower band than a boom-and-collapse profile. That
+                    deserves a process review, not an invented crisis.
+                    Consistency is useful; whether you are consistently good or
+                    consistently fucked still depends on the scoring rank above.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Ja&#x27;Marr Chase (pick 3),
+                    Kenneth Walker III (pick 18), Malik Nabers (pick 23), Trey
+                    McBride (pick 38). Those are the opening investments. The
+                    weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 7.4 final win equivalents;
+                    68.8% conditional top-field chance; 4.6% regular-season
+                    first-place chance. The door is open and the bouncer is
+                    unimpressed. You have work to do, not a reservation. Improve
+                    the weekly output before explaining how dangerous you will
+                    be once everybody kindly stops beating you. Scenario
+                    estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-6">
+                <h2>
+                    The Supreme Chancellor : The bench has filed for custody
+                </h2>
+                <p class="manager-deck">
+                    The Supreme Chancellor · 2–4–0 · Standing 7
+                </p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>THE BENCH HAS FILED FOR CUSTODY</b>
+                        <p>
+                            102.30 unused points. The bench is better funded
+                            than the fucking scoreboard.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>124.71</b></div>
+                        <div><span>UNUSED POINTS</span><b>102.30</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>87.97%</b></div>
+                        <div><span>PAIRING LUCK</span><b>-2.11 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>87.97%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 87.97262979683973%"></i>
+                    </div>
+                </div>
+                <p>
+                    <strong>102.30 unused points</strong>, the largest measured
+                    gap in the league. The Supreme Chancellor has built a talent
+                    pipeline that terminates at the bench. An impressive
+                    operation if the objective was to fuck yourself in several
+                    eligible positions.
+                </p>
+                <p>
+                    <strong>124.71 per week</strong>, scoring rank 2 of 10.
+                    Against the whole weekly field: 37 wins in 54 comparisons,
+                    with 0 ties. That is repeatable production across the
+                    collected weeks, not just a fortunate opponent. The roster
+                    has done enough to earn respect. Unfortunately, you may
+                    interpret respect as permission to talk, which is how a
+                    perfectly good scoring profile becomes a fucking hostage
+                    situation.
+                </p>
+                <p>
+                    4.11 expected wins;
+                    <strong>2.11 lost to the pairings</strong>. You faced 721.40
+                    points. Fuck. Your schedule complaint survives inspection. I
+                    hate when the whining comes with a spreadsheet that agrees.
+                </p>
+                <figure class="meme" data-variant="2">
+                    <div class="eyebrow">
+                        THE BENCH TRANSFER DESK / POINTS IN EXILE
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="THE BENCH TRANSFER DESK / POINTS IN EXILE: 102.30 unused points. The bench is better funded than the fucking scoreboard."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <path
+                            d="M 290 170 L 510 170"
+                            stroke="#ff795d"
+                            stroke-width="8"
+                        />
+                        <path
+                            d="M 485 145 L 515 170 L 485 195"
+                            stroke="#ff795d"
+                            stroke-width="8"
+                            fill="none"
+                        />
+                        <rect
+                            x="30"
+                            y="65"
+                            width="250"
+                            height="210"
+                            rx="12"
+                            fill="#223149"
+                        />
+                        <text
+                            x="55"
+                            y="110"
+                            fill="#ff795d"
+                            font-size="16"
+                            font-weight="700"
+                        >
+                            SCORED
+                        </text>
+                        <text
+                            x="55"
+                            y="183"
+                            fill="#d4fc69"
+                            font-size="32"
+                            font-weight="700"
+                        >
+                            748.26
+                        </text>
+                        <rect
+                            x="520"
+                            y="65"
+                            width="250"
+                            height="210"
+                            rx="12"
+                            fill="#223149"
+                        />
+                        <text
+                            x="545"
+                            y="110"
+                            fill="#ff795d"
+                            font-size="16"
+                            font-weight="700"
+                        >
+                            UNUSED
+                        </text>
+                        <text
+                            x="545"
+                            y="183"
+                            fill="#d4fc69"
+                            font-size="32"
+                            font-weight="700"
+                        >
+                            102.30
+                        </text>
+                        <text
+                            x="30"
+                            y="325"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            J.K. Dobbins: THANKS FOR THE FUCKING SEAT.
+                        </text>
+                    </svg>
+                    <figcaption>
+                        The Supreme Chancellor · 102.30 unused points. The bench
+                        is better funded than the fucking scoreboard.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 5: 125.90 actual, 159.10 ceiling.</strong> You
+                    started Deebo Samuel Sr. (1.50), DK Metcalf (3.80), Ashton
+                    Jeanty (9.20); the eligible alternative used J.K. Dobbins
+                    (14.40), Rhamondre Stevenson (16.00), Matthew Golden
+                    (17.30). 33.20 points stayed behind. Your bench wasn&#x27;t
+                    deep. It was a fucking witness protection program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 5, by 3.32</strong>. Your
+                    eligible ceiling beat their actual score. The winning points
+                    were in the building. Fucking exquisite. Hindsight
+                    identifies the alternative; it does not prove the move was
+                    obvious before kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>95.00, L</strong>. 10.40 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>95.00 in Week 6 to 142.22 in Week 2</strong>, a
+                    47.22-point swing. The weekly output has stayed inside a
+                    narrower band than a boom-and-collapse profile. That
+                    deserves a process review, not an invented crisis.
+                    Consistency is useful; whether you are consistently good or
+                    consistently fucked still depends on the scoring rank above.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Jahmyr Gibbs (pick 1),
+                    Ashton Jeanty (pick 20), Josh Allen (pick 21), Garrett
+                    Wilson (pick 40). Those are the opening investments. The
+                    weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 7.2 final win equivalents;
+                    71.2% conditional top-field chance; 4.7% regular-season
+                    first-place chance. The door is open and the bouncer is
+                    unimpressed. You have work to do, not a reservation. Improve
+                    the weekly output before explaining how dangerous you will
+                    be once everybody kindly stops beating you. Scenario
+                    estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-7">
+                <h2>Dan is the Most Gay: A grievance with receipts</h2>
+                <p class="manager-deck">
+                    Dan is the Most Gay · 2–4–0 · Standing 8
+                </p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>A GRIEVANCE WITH RECEIPTS</b>
+                        <p>
+                            -0.67 pairing wins. Annoyingly, the schedule
+                            complaint is not bullshit.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>119.55</b></div>
+                        <div><span>UNUSED POINTS</span><b>84.00</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>89.52%</b></div>
+                        <div><span>PAIRING LUCK</span><b>-0.67 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>89.52%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 89.5167731629393%"></i>
+                    </div>
+                </div>
+                <p>
+                    Dan is the Most Gay: <strong>2–4–0</strong>, scoring rank 4.
+                    717.28 points bought standing 8. I ran the numbers twice.
+                    Neither run detected a reason for a fucking victory
+                    documentary.
+                </p>
+                <p>
+                    <strong>119.55 per week</strong>, scoring rank 4 of 10.
+                    Against the whole weekly field: 24 wins in 54 comparisons,
+                    with 0 ties. You are in the crowded middle, where one good
+                    result becomes a dynasty announcement and one bad result
+                    becomes a conspiracy. Neither speech improves the roster.
+                    Earn some separation before making the rest of us attend
+                    your fucking press conference.
+                </p>
+                <p>
+                    2.67 expected wins;
+                    <strong>0.67 lost to the pairings</strong>. You faced 745.30
+                    points. Fuck. Your schedule complaint survives inspection. I
+                    hate when the whining comes with a spreadsheet that agrees.
+                </p>
+                <figure class="meme" data-variant="3">
+                    <div class="eyebrow">
+                        RECORD VS REPUTATION / SCHEDULE AUDIT
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="RECORD VS REPUTATION / SCHEDULE AUDIT: -0.67 pairing wins. Annoyingly, the schedule complaint is not bullshit."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <text
+                            x="35"
+                            y="60"
+                            fill="#ff795d"
+                            font-size="15"
+                            font-weight="700"
+                        >
+                            THE RECORD
+                        </text>
+                        <text
+                            x="35"
+                            y="145"
+                            fill="#d4fc69"
+                            font-size="55"
+                            font-weight="700"
+                        >
+                            2–4–0
+                        </text>
+                        <path
+                            d="M 390 35 L 390 265"
+                            stroke="#35435b"
+                            stroke-width="2"
+                        />
+                        <text
+                            x="440"
+                            y="60"
+                            fill="#ff795d"
+                            font-size="15"
+                            font-weight="700"
+                        >
+                            EXPECTED WINS
+                        </text>
+                        <text
+                            x="440"
+                            y="145"
+                            fill="#eef2fa"
+                            font-size="55"
+                            font-weight="700"
+                        >
+                            2.67
+                        </text>
+                        <text
+                            x="35"
+                            y="235"
+                            fill="#eef2fa"
+                            font-size="24"
+                            font-weight="700"
+                        >
+                            PAIRING DIFFERENCE: -0.67 W
+                        </text>
+                        <text
+                            x="35"
+                            y="325"
+                            fill="#eef2fa"
+                            font-size="21"
+                            font-weight="700"
+                        >
+                            A matchup schedule is not a character reference.
+                        </text>
+                    </svg>
+                    <figcaption>
+                        Dan is the Most Gay · -0.67 pairing wins. Annoyingly,
+                        the schedule complaint is not bullshit.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 4: 109.62 actual, 131.82 ceiling.</strong> You
+                    started George Pickens (8.50), Parker Washington (1.50),
+                    Bucky Irving (6.10); the eligible alternative used Isaiah
+                    Likely (10.10), Romeo Doubs (20.80), MarShawn Lloyd (7.40).
+                    22.20 points stayed behind. Your bench wasn&#x27;t deep. It
+                    was a fucking witness protection program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 3, by 21.56</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>89.10, L</strong>. 9.70 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>89.10 in Week 6 to 192.66 in Week 5</strong>, a
+                    103.56-point swing. The ceiling exists. So does the
+                    trapdoor. Stop presenting the best screenshot as the entire
+                    business model; I have the other weeks, you selective little
+                    archivist. Build a weekly floor before that highlight reel
+                    needs a fucking disclaimer.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Puka Nacua (pick 5), Derrick
+                    Henry (pick 16), George Pickens (pick 25), Tee Higgins (pick
+                    36). Those are the opening investments. The weekly output
+                    above is the return so far; draft position alone does not
+                    certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 5.8 final win equivalents;
+                    30.5% conditional top-field chance; 0.7% regular-season
+                    first-place chance. The door is open and the bouncer is
+                    unimpressed. You have work to do, not a reservation. Improve
+                    the weekly output before explaining how dangerous you will
+                    be once everybody kindly stops beating you. Scenario
+                    estimate, not a clinch or title prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-8">
+                <h2>The Gas Lighters: The rebuild starts with the dropdown</h2>
+                <p class="manager-deck">
+                    The Gas Lighters · 2–4–0 · Standing 9
+                </p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>THE REBUILD STARTS WITH THE DROPDOWN</b>
+                        <p>
+                            Scoring rank 9, standing 9. The investigation
+                            requires more than your fucking confidence.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>105.94</b></div>
+                        <div><span>UNUSED POINTS</span><b>54.12</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>92.15%</b></div>
+                        <div><span>PAIRING LUCK</span><b>-0.22 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>92.15%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 92.15379262352123%"></i>
+                    </div>
+                </div>
+                <p>
+                    The Gas Lighters: <strong>2–4–0</strong>, scoring rank 9.
+                    635.64 points bought standing 9. I ran the numbers twice.
+                    Neither run detected a reason for a fucking victory
+                    documentary.
+                </p>
+                <p>
+                    <strong>105.94 per week</strong>, scoring rank 9 of 10.
+                    Against the whole weekly field: 20 wins in 54 comparisons,
+                    with 0 ties. There is a production deficit here before we
+                    even open the schedule file. You need better weekly output,
+                    not a louder closing argument. The other teams cannot all be
+                    lucky every time your roster takes a shit on the same
+                    spreadsheet.
+                </p>
+                <p>
+                    20 weekly all-play wins, 34 losses, 0 ties. The schedule
+                    difference is -0.22 wins. The fixture list is not your
+                    fucking alibi.
+                </p>
+                <figure class="meme" data-variant="0">
+                    <div class="eyebrow">
+                        ESCALATING EVIDENCE / THE GROUP CHAT
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="ESCALATING EVIDENCE / THE GROUP CHAT: Scoring rank 9, standing 9. The investigation requires more than your fucking confidence."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <rect
+                            x="15"
+                            y="15"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#1c2940"
+                        />
+                        <text
+                            x="35"
+                            y="80"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            01
+                        </text>
+                        <text
+                            x="120"
+                            y="45"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE ALLEGATION
+                        </text>
+                        <text
+                            x="120"
+                            y="80"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            WEEK 4: 17.00 POINTS UNUSED.
+                        </text>
+                        <rect
+                            x="15"
+                            y="140"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#243750"
+                        />
+                        <text
+                            x="35"
+                            y="205"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            02
+                        </text>
+                        <text
+                            x="120"
+                            y="170"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE RECEIPTS
+                        </text>
+                        <text
+                            x="120"
+                            y="205"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            635.64 points. -0.22 pairing wins.
+                        </text>
+                        <rect
+                            x="15"
+                            y="265"
+                            width="770"
+                            height="115"
+                            rx="9"
+                            fill="#304638"
+                        />
+                        <text
+                            x="35"
+                            y="330"
+                            fill="#d4fc69"
+                            font-size="36"
+                            font-weight="700"
+                        >
+                            03
+                        </text>
+                        <text
+                            x="120"
+                            y="295"
+                            fill="#ff795d"
+                            font-size="13"
+                            font-weight="700"
+                        >
+                            THE MACHINE VERDICT
+                        </text>
+                        <text
+                            x="120"
+                            y="330"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            THE REBUILD STARTS WITH THE DROPDOWN
+                        </text>
+                    </svg>
+                    <figcaption>
+                        The Gas Lighters · Scoring rank 9, standing 9. The
+                        investigation requires more than your fucking
+                        confidence.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 4: 151.88 actual, 168.88 ceiling.</strong> You
+                    started Dontayvion Wicks (3.30); the eligible alternative
+                    used Alvin Kamara (20.30). 17.00 points stayed behind. Your
+                    bench wasn&#x27;t deep. It was a fucking witness protection
+                    program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 2, by 10.84</strong>. The
+                    recorded ceiling supplies no winning escape hatch. For once,
+                    the bench is not the defendant. Hindsight identifies the
+                    alternative; it does not prove the move was obvious before
+                    kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>117.98, W</strong>. 14.80 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>70.24 in Week 3 to 151.88 in Week 4</strong>, a
+                    81.64-point swing. The ceiling exists. So does the trapdoor.
+                    Stop presenting the best screenshot as the entire business
+                    model; I have the other weeks, you selective little
+                    archivist. Build a weekly floor before that highlight reel
+                    needs a fucking disclaimer.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Christian McCaffrey (pick
+                    8), De&#x27;Von Achane (pick 13), Breece Hall (pick 28),
+                    Tetairoa McMillan (pick 33). Those are the opening
+                    investments. The weekly output above is the return so far;
+                    draft position alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 5.2 final win equivalents;
+                    11.2% conditional top-field chance; 0.1% regular-season
+                    first-place chance. The model sees a narrow route. That is a
+                    reason to address the weakest slots, not start composing
+                    your heroic comeback speech. Give the simulation better
+                    weekly evidence before demanding it believe in your fucking
+                    destiny. Scenario estimate, not a clinch or title
+                    prediction.
+                </p>
+            </section>
+            <section class="manager-section" id="manager-9">
+                <h2>
+                    Team buschhhhhhhhhh: The rebuild starts with the dropdown
+                </h2>
+                <p class="manager-deck">
+                    Team buschhhhhhhhhh · 1–5–0 · Standing 10
+                </p>
+                <div class="manager-dashboard">
+                    <div class="verdict">
+                        <span class="eyebrow">MACHINE DIAGNOSIS</span
+                        ><b>THE REBUILD STARTS WITH THE DROPDOWN</b>
+                        <p>
+                            Scoring rank 10, standing 10. The investigation
+                            requires more than your fucking confidence.
+                        </p>
+                    </div>
+                    <div class="manager-metrics">
+                        <div><span>POINTS / WEEK</span><b>88.37</b></div>
+                        <div><span>UNUSED POINTS</span><b>75.20</b></div>
+                        <div><span>LINEUP EFFICIENCY</span><b>87.58%</b></div>
+                        <div><span>PAIRING LUCK</span><b>+0.44 W</b></div>
+                    </div>
+                    <div class="extraction-label">
+                        <span>ACTUAL POINTS EXTRACTED</span><span>87.58%</span>
+                    </div>
+                    <div class="extraction-track">
+                        <i style="width: 87.57928118393235%"></i>
+                    </div>
+                </div>
+                <p>
+                    <strong>530.24 points. Last in scoring.</strong> Team
+                    buschhhhhhhhhh is running a football franchise with the
+                    offensive output of a printer asking for cyan. The other
+                    teams are playing fantasy. You are submitting a fucking
+                    support ticket.
+                </p>
+                <p>
+                    <strong>88.37 per week</strong>, scoring rank 10 of 10.
+                    Against the whole weekly field: 5 wins in 54 comparisons,
+                    with 0 ties. There is a production deficit here before we
+                    even open the schedule file. You need better weekly output,
+                    not a louder closing argument. The other teams cannot all be
+                    lucky every time your roster takes a shit on the same
+                    spreadsheet.
+                </p>
+                <p>
+                    5 weekly all-play wins, 49 losses, 0 ties. The schedule
+                    difference is +0.44 wins. The fixture list is not your
+                    fucking alibi.
+                </p>
+                <figure class="meme" data-variant="1">
+                    <div class="eyebrow">
+                        REJECT / APPROVE / THE LINEUP INTERVIEW
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 800 390"
+                        role="img"
+                        aria-label="REJECT / APPROVE / THE LINEUP INTERVIEW: Scoring rank 10, standing 10. The investigation requires more than your fucking confidence."
+                    >
+                        <rect width="800" height="390" rx="14" fill="#101a29" />
+                        <rect
+                            x="12"
+                            y="10"
+                            width="776"
+                            height="180"
+                            rx="10"
+                            fill="#382632"
+                        />
+                        <text
+                            x="35"
+                            y="105"
+                            fill="#ff795d"
+                            font-size="40"
+                            font-weight="700"
+                        >
+                            NO
+                        </text>
+                        <text
+                            x="185"
+                            y="55"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            CREDIT FOR THE ENTIRE ROSTER
+                        </text>
+                        <text
+                            x="185"
+                            y="105"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            75.20 unused points do not score
+                        </text>
+                        <text
+                            x="185"
+                            y="131"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            themselves.
+                        </text>
+                        <rect
+                            x="12"
+                            y="205"
+                            width="776"
+                            height="180"
+                            rx="10"
+                            fill="#243b36"
+                        />
+                        <text
+                            x="35"
+                            y="300"
+                            fill="#d4fc69"
+                            font-size="40"
+                            font-weight="700"
+                        >
+                            YES
+                        </text>
+                        <text
+                            x="185"
+                            y="250"
+                            fill="#eef2fa"
+                            font-size="20"
+                            font-weight="700"
+                        >
+                            CREDIT FOR ACTUAL EXECUTION
+                        </text>
+                        <text
+                            x="185"
+                            y="300"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            530.24 scored. 1 wins earned on the
+                        </text>
+                        <text
+                            x="185"
+                            y="326"
+                            fill="#eef2fa"
+                            font-size="18"
+                            font-weight="700"
+                        >
+                            board.
+                        </text>
+                    </svg>
+                    <figcaption>
+                        Team buschhhhhhhhhh · Scoring rank 10, standing 10. The
+                        investigation requires more than your fucking
+                        confidence.
+                    </figcaption>
+                </figure>
+                <p>
+                    <strong>Week 4: 73.84 actual, 109.54 ceiling.</strong> You
+                    started Dalton Kincaid (1.20), Ladd McConkey (0.00); the
+                    eligible alternative used Kyle Monangai (27.50), Luther
+                    Burden III (9.40). 35.70 points stayed behind. Your bench
+                    wasn&#x27;t deep. It was a fucking witness protection
+                    program.
+                </p>
+                <p>
+                    Closest defeat: <strong>Week 1, by 11.52</strong>. Your
+                    eligible ceiling beat their actual score. The winning points
+                    were in the building. Fucking exquisite. Hindsight
+                    identifies the alternative; it does not prove the move was
+                    obvious before kickoff.
+                </p>
+                <p>
+                    Week 6: <strong>87.46, L</strong>. 4.40 unused points. The
+                    sequel did not require another bench subplot.
+                </p>
+                <p>
+                    Your range:
+                    <strong>71.10 in Week 2 to 107.70 in Week 1</strong>, a
+                    36.60-point swing. The weekly output has stayed inside a
+                    narrower band than a boom-and-collapse profile. That
+                    deserves a process review, not an invented crisis.
+                    Consistency is useful; whether you are consistently good or
+                    consistently fucked still depends on the scoring rank above.
+                </p>
+                <p>
+                    <strong>Draft opening:</strong> Jonathan Taylor (pick 4),
+                    A.J. Brown (pick 17), Jeremiyah Love (pick 24), Ladd
+                    McConkey (pick 37). Those are the opening investments. The
+                    weekly output above is the return so far; draft position
+                    alone does not certify a steal or a fuckup.
+                </p>
+                <p>
+                    <strong>My forecast:</strong> 2.8 final win equivalents;
+                    0.2% conditional top-field chance; 0.0% regular-season
+                    first-place chance. The model sees a narrow route. That is a
+                    reason to address the weakest slots, not start composing
+                    your heroic comeback speech. Give the simulation better
+                    weekly evidence before demanding it believe in your fucking
+                    destiny. Scenario estimate, not a clinch or title
+                    prediction.
+                </p>
+            </section>
+            <h2>The remaining season, according to the machine</h2>
+            <div class="tablewrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>Final wins</th>
+                            <th>Top field</th>
+                            <th>First place</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Purdy Mouth</td>
+                            <td>9.6</td>
+                            <td>97.3%</td>
+                            <td>48.3%</td>
+                        </tr>
+                        <tr>
+                            <td>Sean Suck On Deez Nutz</td>
+                            <td>8.4</td>
+                            <td>87.1%</td>
+                            <td>14.6%</td>
+                        </tr>
+                        <tr>
+                            <td>F***in Sha Bi</td>
+                            <td>8.0</td>
+                            <td>78.8%</td>
+                            <td>9.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Awfully Awful</td>
+                            <td>7.9</td>
+                            <td>73.0%</td>
+                            <td>5.6%</td>
+                        </tr>
+                        <tr>
+                            <td>Placehold for Something good</td>
+                            <td>7.7</td>
+                            <td>81.9%</td>
+                            <td>11.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Capt&#x27;n Tipsy n The Drunken Crew</td>
+                            <td>7.4</td>
+                            <td>68.8%</td>
+                            <td>4.6%</td>
+                        </tr>
+                        <tr>
+                            <td>The Supreme Chancellor</td>
+                            <td>7.2</td>
+                            <td>71.2%</td>
+                            <td>4.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Dan is the Most Gay</td>
+                            <td>5.8</td>
+                            <td>30.5%</td>
+                            <td>0.7%</td>
+                        </tr>
+                        <tr>
+                            <td>The Gas Lighters</td>
+                            <td>5.2</td>
+                            <td>11.2%</td>
+                            <td>0.1%</td>
+                        </tr>
+                        <tr>
+                            <td>Team buschhhhhhhhhh</td>
+                            <td>2.8</td>
+                            <td>0.2%</td>
+                            <td>0.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                <strong
+                    >Purdy Mouth leads the regular-season first-place scenarios
+                    at 48.3%.</strong
+                >
+                That is the model&#x27;s current favorite, not a message from
+                the football gods. The simulations reuse observed scoring under
+                stated assumptions. They do not know your next waiver claim,
+                injury report or capacity for a fresh fucking disaster.
+            </p>
+            <p>
+                Read the probabilities as a range of possible endings. A strong
+                chance earns praise, a weak one demands work, and neither
+                justifies mailing yourself a trophy. The title is still outside
+                this regular-season forecast. Even the machine has limits; yours
+                appear to involve the lineup screen.
+            </p>
+            <section class="forecast-visual">
+                <div class="eyebrow">6 SEATS. 10 EGOS.</div>
+                <h3>The postseason guest list</h3>
+                <p>
+                    Conditional top-field chances. An invitation is not a
+                    trophy.
+                </p>
+                <div class="probability-row">
+                    <span>Purdy Mouth</span>
+                    <div><i style="width: 97.32%"></i></div>
+                    <b>97.3%</b>
+                </div>
+                <div class="probability-row">
+                    <span>Sean Suck On Deez Nutz</span>
+                    <div><i style="width: 87.07%"></i></div>
+                    <b>87.1%</b>
+                </div>
+                <div class="probability-row">
+                    <span>F***in Sha Bi</span>
+                    <div><i style="width: 78.83%"></i></div>
+                    <b>78.8%</b>
+                </div>
+                <div class="probability-row">
+                    <span>Awfully Awful</span>
+                    <div><i style="width: 72.96%"></i></div>
+                    <b>73.0%</b>
+                </div>
+                <div class="probability-row">
+                    <span>Placehold for Something good</span>
+                    <div><i style="width: 81.87%"></i></div>
+                    <b>81.9%</b>
+                </div>
+                <div class="probability-row">
+                    <span>Capt&#x27;n Tipsy n The Drunken Crew</span>
+                    <div><i style="width: 68.85%"></i></div>
+                    <b>68.8%</b>
+                </div>
+                <div class="probability-row">
+                    <span>The Supreme Chancellor </span>
+                    <div><i style="width: 71.2%"></i></div>
+                    <b>71.2%</b>
+                </div>
+                <div class="probability-row">
+                    <span>Dan is the Most Gay</span>
+                    <div><i style="width: 30.5%"></i></div>
+                    <b>30.5%</b>
+                </div>
+                <div class="probability-row">
+                    <span>The Gas Lighters</span>
+                    <div><i style="width: 11.2%"></i></div>
+                    <b>11.2%</b>
+                </div>
+                <div class="probability-row">
+                    <span>Team buschhhhhhhhhh</span>
+                    <div><i style="width: 0.2%"></i></div>
+                    <b>0.2%</b>
+                </div>
+                <p class="caption">
+                    Conditional simulation, not a clinch or championship
+                    forecast. Displayed ranks follow the stated ranking rule.
+                </p>
+            </section>
+            <h2>Orders from your clearly superior commissioner substitute</h2>
+            <div class="order-card">
+                <span class="order-id">01</span>
+                <div>
+                    <b>Purdy Mouth</b>
+                    <p>
+                        Your +1.00-win schedule subsidy is not a pension.
+                        Improve the lowest-output starting slots while the
+                        record gives you room. The next opponent is not
+                        contractually obliged to shit itself for your
+                        convenience.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">02</span>
+                <div>
+                    <b>Sean Suck On Deez Nutz</b>
+                    <p>
+                        Start with the slots behind Week 5&#x27;s 96.94.
+                        Separate poor production from bad selection, then target
+                        an actual upgrade. Your team needs a decision with
+                        evidence, not another fucking rebrand.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">03</span>
+                <div>
+                    <b>F***in Sha Bi</b>
+                    <p>
+                        Start with the slots behind Week 3&#x27;s 90.64.
+                        Separate poor production from bad selection, then target
+                        an actual upgrade. Your team needs a decision with
+                        evidence, not another fucking rebrand.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">04</span>
+                <div>
+                    <b>Awfully Awful</b>
+                    <p>
+                        Your +1.22-win schedule subsidy is not a pension.
+                        Improve the lowest-output starting slots while the
+                        record gives you room. The next opponent is not
+                        contractually obliged to shit itself for your
+                        convenience.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">05</span>
+                <div>
+                    <b>Placehold for Something good</b>
+                    <p>
+                        Revisit Week 4&#x27;s 47.60-point lineup gap. 1 losses
+                        had winning hindsight ceilings. Audit availability and
+                        eligible replacements before kickoff. You cannot recover
+                        old points, but you can stop giving the same fucking
+                        mistake a season ticket.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">06</span>
+                <div>
+                    <b>Capt&#x27;n Tipsy n The Drunken Crew</b>
+                    <p>
+                        Start with the slots behind Week 3&#x27;s 104.94.
+                        Separate poor production from bad selection, then target
+                        an actual upgrade. Your team needs a decision with
+                        evidence, not another fucking rebrand.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">07</span>
+                <div>
+                    <b>The Supreme Chancellor </b>
+                    <p>
+                        Revisit Week 5&#x27;s 33.20-point lineup gap. 2 losses
+                        had winning hindsight ceilings. Audit availability and
+                        eligible replacements before kickoff. You cannot recover
+                        old points, but you can stop giving the same fucking
+                        mistake a season ticket.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">08</span>
+                <div>
+                    <b>Dan is the Most Gay</b>
+                    <p>
+                        Start with the slots behind Week 6&#x27;s 89.10.
+                        Separate poor production from bad selection, then target
+                        an actual upgrade. Your team needs a decision with
+                        evidence, not another fucking rebrand.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">09</span>
+                <div>
+                    <b>The Gas Lighters</b>
+                    <p>
+                        Start with the slots behind Week 3&#x27;s 70.24.
+                        Separate poor production from bad selection, then target
+                        an actual upgrade. Your team needs a decision with
+                        evidence, not another fucking rebrand.
+                    </p>
+                </div>
+            </div>
+            <div class="order-card">
+                <span class="order-id">10</span>
+                <div>
+                    <b>Team buschhhhhhhhhh</b>
+                    <p>
+                        Revisit Week 4&#x27;s 35.70-point lineup gap. 2 losses
+                        had winning hindsight ceilings. Audit availability and
+                        eligible replacements before kickoff. You cannot recover
+                        old points, but you can stop giving the same fucking
+                        mistake a season ticket.
+                    </p>
+                </div>
+            </div>
+            <section class="methodology">
+                <h2>Model and eligibility context</h2>
+                <p>
+                    Hindsight ceilings are not proof every alternative was
+                    available or obvious before kickoff. Opponent lineups stay
+                    fixed when identifying winning ceilings.
+                </p>
+                <p>
+                    H2H wins (ties half), then PF; provider-specific divisional
+                    seeds not applied
+                </p>
+                <p>
+                    Experimental ESPN SDK adapter: validate against the league
+                    UI before publishing.
+                </p>
+                <p>
+                    Names are team labels; manager identities and transactions
+                    are not yet mapped.
+                </p>
+                <p>
+                    Historical IR and lineup locks are incomplete; optimum
+                    scores are hindsight ceilings.
+                </p>
+                <p>
+                    Ranks/projections assume weekly H2H, wins then PF;
+                    divisions, multiweek and median games are unsupported.
+                </p>
+                <p>
+                    Weekly independent score resampling; missing pairings
+                    randomized, repeats allowed.
+                </p>
+                <p>
+                    Top field by wins then PF, exact ties randomized; no
+                    divisions or championship simulation.
+                </p>
+                <p>
+                    Known future pairings/byes retained. Injuries, bye-week
+                    player effects and future trades not forecast.
+                </p>
+                <p>
+                    Percentiles are conditional model outcomes, not calibrated
+                    confidence intervals.
+                </p>
+            </section>
+        </main>
+        <script>
+            (() => {
+                const b = document.querySelector('.motion-toggle');
+                if (!b) return;
+                const m = window.matchMedia('(prefers-reduced-motion: reduce)');
+                let paused = m.matches;
+                function update() {
+                    document
+                        .querySelectorAll('.animated-meme')
+                        .forEach((img) => {
+                            if (!img.dataset.motion)
+                                img.dataset.motion = img.src;
+                            img.src = paused
+                                ? img.dataset.still
+                                : img.dataset.motion;
+                        });
+                    document.documentElement.classList.toggle(
+                        'motion-paused',
+                        paused
+                    );
+                    b.setAttribute('aria-pressed', String(paused));
+                    b.textContent = paused ? 'Enable motion' : 'Pause motion';
+                }
+                b.addEventListener('click', () => {
+                    paused = !paused;
+                    update();
+                });
+                m.addEventListener('change', (e) => {
+                    paused = e.matches;
+                    update();
+                });
+                update();
+            })();
+        </script>
+    </body>
+</html>
